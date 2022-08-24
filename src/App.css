@@ -1,38 +1,135 @@
-.App {
+:root {
+  --navBackground: #292d33;
+  --navText: #bababa;
+  --textMain: #f86449;
+  --textStandard: #111111;
+  --textStandard2: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--navBackground);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar .navitem a {
+  font-family: sans-serif;
+  float: left;
+  display: block;
+  color: var(--navText);
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar .navitem a:hover {
+  color: var(--textMain);
+}
+
+.opening {
+  margin: 80px 20px 0px 20px;
+  width: auto;
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.opening h1 {
+  font-family: sans-serif;
+  font-size: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.opening p {
+  font-family: fantasy;
+  font-size: 48px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContent {
+  margin: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row-reverse;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContent .content1 {
+  text-align: center;
+  flex: 1;
+  margin: 10px 20px 20px 10px;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mainContent .content1 .content1Add {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainContent .content1 .content1Add .content1Add1 {
+  text-align: left;
+  padding: 10%;
+  flex: 1 1 0;
+}
+
+.mainContent .content1 .content1Add .content1Add2 {
+  text-align: left;
+  padding: 10%;
+  flex: 1 1 0;
+}
+
+.mainContent .content1 .content1Add .content1Add3 {
+  text-align: left;
+  padding: 10%;
+  flex: 1 1 0;
+}
+
+.mainContent .content1 .content1Add .content1Add4 {
+  text-align: left;
+  padding: 10%;
+  flex: 1 1 0;
+}
+
+.mainContent .content1 .CVButton {
+  padding: 16px 24px;
+  border: 2px solid var(--textMain);
+  border-radius: 25px;
+  background-color: var(--textMain);
+  display: block;
+  color: var(--navText);
+  text-align: center;
+  padding: 25px 25px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.mainContent .content1 .CVButton a {
+  color: var(--textStandard2);
+}
+
+.mainContent .content2 {
+  border: 2px solid var(--textMain);
+  border-radius: 25px;
+  background-color: var(--textMain);
+  margin-bottom: 20px;
+  padding-left: 5%;
+  text-align: left;
+  flex: 1;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 990px) {
+  .mainContent {
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+  .mainContent .content2 {
+    flex-basis: 100%;
   }
 }
